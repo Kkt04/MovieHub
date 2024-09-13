@@ -41,7 +41,7 @@ export default function MoviesApp() {
                             sort_by: sortBy,
                             page: 1,
                             with_genres: selectedGenre,
-                            query: searchQuery,  // Ensures that searchQuery is used
+                            query: searchQuery,
                         },
                     }
                 );
@@ -50,7 +50,6 @@ export default function MoviesApp() {
                 console.error('Error fetching movies:', error);
             }
         };
-        
         fetchMovies();
     }, [sortBy, selectedGenre, searchQuery]);
 
@@ -79,12 +78,9 @@ export default function MoviesApp() {
                     onChange={handleSearchChange} 
                     className='search-input' 
                 />
-                <button 
-            className='search-button'
-            onClick={() => fetchMovies()} 
-        >
-            <AiOutlineSearch />
-        </button>
+                <button className='search-button'>
+                    <AiOutlineSearch />
+                </button>
             </div>
             <div className='filters'>
                 <label htmlFor='sort-by'>Sort By:</label>
