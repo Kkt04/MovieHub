@@ -19,7 +19,7 @@ export default function MoviesApp() {
                     'http://api.themoviedb.org/3/genre/movie/list',
                     {
                         params: {
-                            api_key: '0fa2853e7c4d6c8f146aba861c5e4a06',
+                            api_key: 'b60bf75137b3d6159d89baf1ec316a3c',
                         },
                     }
                 );
