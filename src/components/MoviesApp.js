@@ -54,6 +54,35 @@ export default function MoviesApp() {
         fetchMovies();
     }, [sortBy, selectedGenre, searchQuery]);
 
+    // useEffect(() => {
+    //     const fetchMovies = async () => {
+    //         try {
+    //             const endpoint = searchQuery
+    //                 ? 'http://api.themoviedb.org/3/search/movie'
+    //                 : 'http://api.themoviedb.org/3/discover/movie';
+    
+    //             const params = {
+    //                 api_key: '0fa2853e7c4d6c8f146aba861c5e4a06',
+    //                 sort_by: sortBy,
+    //                 page: 1,
+    //                 with_genres: selectedGenre,
+    //             };
+    
+    //             if (searchQuery) {
+    //                 params.query = searchQuery;
+    //             }
+    
+    //             const response = await axios.get(endpoint, { params });
+    //             setMovies(response.data.results);
+    //         } catch (error) {
+    //             console.error('Error fetching movies:', error);
+    //         }
+    //     };
+    //     fetchMovies();
+    // }, [sortBy, selectedGenre, searchQuery]);
+    
+
+
     const handleSearchChange = (event) => {
         setSearchQuery(event.target.value);
       };
@@ -74,7 +103,7 @@ export default function MoviesApp() {
                 <h1>Movie<span style={{ backgroundColor: 'orange', borderRadius: '20px' }}>Hub</span></h1>
                 </div>
                 <div className='search-bar'>
-                <input 
+                {/* <input 
                     type='text' 
                     placeholder='Search for a movie' 
                     value={searchQuery} 
@@ -83,7 +112,7 @@ export default function MoviesApp() {
                     />
                     <button className='search-button'>
                         <AiOutlineSearch />
-                    </button>
+                    </button> */}
                 </div>
                 <div className='filters'>
                     <label htmlFor='sort-by'>Sort By:</label>
